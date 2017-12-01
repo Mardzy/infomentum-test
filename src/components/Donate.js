@@ -4,7 +4,7 @@ const Donate = ()=> {
   return (
     <div id="donate">
       <h1>Donate Today</h1>
-      <p>Help protecting the planet today, Become a Little Zebra ambassador</p>
+      <h5>Help protecting the planet today, Become a Little Zebra ambassador</h5>
       <DonationWidget />
     </div>
   );
