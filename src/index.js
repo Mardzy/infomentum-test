@@ -4,7 +4,6 @@ import Navbar from './common/Navbar';
 import Donate from './components/Donate';
 import 'bootstrap/dist/css/bootstrap.css';
 import './scss/style.scss';
-import 'fontawesome';
 
 class App extends React.Component {
   constructor(props) {

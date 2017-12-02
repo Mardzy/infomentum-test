@@ -1,28 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 @import "variables";
 @import "navbar";
 @import "donate";
 @import "footer";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 
 body{
   margin: 0;
   padding: 0;
   width: 100%;
   color: $darkGrey;
+  font-family: $font;
 }
 
 main{
   display: flex;
   align-items: center;
-  border-top: 5px $yellow solid;
+  border-top: 7px $yellow solid;
   flex-direction: column;
 }
 
 button{
-  height: 36px;
+  height: 28px;
   padding: 6px 12px;
   width: auto;
   line-height: 16px;
+  font-size: 8px;
   &:hover{
     cursor: pointer;
   }

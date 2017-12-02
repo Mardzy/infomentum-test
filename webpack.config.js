@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpack = new HtmlWebpackPlugin({
-  template: './src/index.html',
+  template: './index.html',
   filename: 'index.html',
   inject: 'body'
 });
@@ -25,7 +25,9 @@ module.exports = {
       { test: /\.(woff|woff2)$/, loader: 'url-loader?prefix=font/&limit=5000' },
       { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/octet-stream' },
       { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=image/svg+xml' },
-      {test: /.(png|jpg)$/, loader: 'url-loader?limit=8192' }
+      {test: /.(png|jpg)$/, loader: 'url-loader?limit=8192' },
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader' }
     ]
   },
   devServer: {
