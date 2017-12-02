@@ -11,9 +11,12 @@ nav{
   }
   ul{
     display: flex;
-    margin-left: -10px;
+    margin: 0;
+    padding: 0; 
     justify-content: space-around;
+    align-content: center;
     width: 35%;
+    list-style: none;
     li a{
       color: $darkGrey;
       font-weight: 100;
@@ -50,11 +53,5 @@ nav{
     right: 10px;
   }
 
-  button.green{
-    background-color: $green;
-    color: $white;
-    font-size: 10px;
-    font-weight: 500;
-    border-bottom: 3px solid darken($green, 8%);
-  }
+
 }

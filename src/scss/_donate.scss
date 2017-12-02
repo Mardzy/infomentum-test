@@ -1,12 +1,12 @@
 #donate{
   background-color: $offWhite;
   width: 100%;
-  height: 600px;
+  height: 520px;
   display: flex;
   flex-direction: column;
   align-items: center;
   h1{
-    padding: 35px 0 13px;
+    padding: 35px 0 15px;
     text-transform: uppercase;
     font-size: 23px;
     font-weight: bold;
@@ -14,31 +14,33 @@
   h5{
     font-size: 16px;
     font-weight: 100;
+    margin-bottom: 5px;
   }
   #donation{
     margin-top: 40px;
-    width: 35%;
-    height: 350px;
-    // display: flex;
-    flex-direction: row;
-    // align-items: center;
+    width: 40.5%;
+    height: 340px;
     background-color: $white;
     .donation-left{
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: 100%;
       h2{
-        font-size: 20px;
-        padding: 35px 0;
+        font-size: 19px;
+        padding: 16px 0 35px;
         font-weight: lighter;
         color: $green;
       }
       .animal-select{
-        width: 80%;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 20px;
         .animal{
+          padding: 5px;
           background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
           background-color:#3498DB;
           background-repeat:no-repeat;
@@ -47,16 +49,75 @@
           font-size: 14px;
           height: 36px;
           width: 70%;
-          border: 2px solid $darkGrey;
+          border: 1px solid $darkGrey;
           border-radius: 0;
           -webkit-appearance: none;
           outline: none;
           background-color: $white;
         }
+
       }
-      p{
-        font-size: 12px;
-        margin: 0;
+
+      form{
+        margin-top: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .donation-buttons{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .donation-button{
+            cursor: pointer;
+            text-align: center;
+            height: 36px;
+            width: 46px;
+            font-size: 15px;
+            // vertical-align: middle;
+            line-height: 32px;
+            background-color: $white;
+            border: 1px solid $darkGrey;
+          }
+          .pound-input {
+            position: relative;
+            width: 39.5%;
+            input.pound {
+              width: 100%;
+              height: 36px;
+              border: 1px solid $darkGrey;
+              border-radius: 0px;
+              padding-left: 22px;
+              font-size: 15px;
+              font-weight: bold;
+            }
+            .fa-gbp {
+              font-weight: lighter;
+              position: absolute;
+              color: $darkGrey;
+              font-size: 15px;
+              top: 12px;
+              left: 10px;
+            }
+          }
+        }
+        .form-check{
+          margin: 20px 0 10px;
+          align-self: flex-start;
+          .form-check-label{
+            font-size: 12px;
+
+          }
+          .form-check-input{
+            width: 5px;
+            height: 5px;
+          }
+        }
+        button.green{
+          align-self: flex-start;
+          width: 94px;
+          margin-left: 0px;
+        }
       }
     }
     .row{
@@ -64,7 +125,7 @@
     }
     div img{
       width: 100%;
-      height: 350px;
+      height: 100%;
       object-fit: cover;
     }
 

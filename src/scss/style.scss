@@ -29,3 +29,11 @@ button{
     cursor: pointer;
   }
 }
+
+button.green{
+  background-color: $green;
+  color: $white;
+  font-size: 10px;
+  font-weight: 500;
+  border-bottom: 3px solid darken($green, 8%);
+}
