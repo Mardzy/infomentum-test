@@ -27,9 +27,9 @@ const Footer = ()=> {
             <li><a href="#"><img src="src/assets/logos/twitter-logo.svg" alt="twitter logo"/></a></li>
             <li><a href="#"><img src="src/assets/logos/youtube-logo.svg" alt="youtube logo"/></a></li>
           </ul>
-          <div className="col-md-5 pt-4 ml-5 pr-0  justify-content-end hidden-large">
+          <div className="col-md-2   address">
             <img src="src/assets/logos/lts-logo-light.svg" alt="light logo"/>
-            <ul className="align-self-end">
+            <ul className="address-list">
               <li>3 Warren Rd,</li>
               <li>Mary Tavy,</li>
               <li>Tavistock PL19 9PF,</li>

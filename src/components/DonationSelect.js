@@ -10,6 +10,7 @@ const DonationSelect = ({handleChange, selectedAnimal})=> {
         onChange={handleChange}
         name={selectedAnimal}
         id={selectedAnimal}
+        required
       >
         <option value="">choose an animal</option>
         <option value="giraffe">a giraffe</option>

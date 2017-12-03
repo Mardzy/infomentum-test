@@ -6,15 +6,16 @@ import WhatWeDo from './components/WhatWeDo';
 import Footer from './common/Footer';
 import 'bootstrap/dist/css/bootstrap.css';
 import './scss/style.scss';
+import ReallySmoothScroll from 'really-smooth-scroll';
+
+ReallySmoothScroll.shim();
 
 class App extends React.Component {
 
   render(){
     return (
       <main>
-        {this.state && <Navbar
-          condition= {this.state.condition}
-        />}
+        <Navbar/>
         <Donate/>
         <WhatWeDo/>
         <Footer/>

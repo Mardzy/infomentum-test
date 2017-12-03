@@ -9,7 +9,14 @@ const Navbar =()=>{
         <img src="src/assets/logos/lts-logo-dark.svg" alt="Little Zebra Foundation Logo Dark" />
       </a>
       <ul>
-        <li className=""><a href="/" className="nav-links">What we do</a></li>
+        <li className=""><a
+          href="/"
+          onClick={(e)=>{
+            e.preventDefault();
+            window.scrollTo(0, 620);
+          }}
+          className="nav-links"
+        >What we do</a></li>
         <li className=""><a href="/about" className="nav-links">Get Involved</a></li>
         <li className=""><a href="/projects" className="nav-links">Shop</a></li>
         <li className=""><a href="/contact" className="nav-links">News</a></li>

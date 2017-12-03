@@ -11,8 +11,9 @@ class DonationWidget extends Component {
       rhino: null,
       tiger: null,
       numberInput: null,
-      total: null,
+      total: 0,
       monthlyDonation: false,
+      error: '',
       selectedAnimal: ''
     };
 
@@ -22,7 +23,7 @@ class DonationWidget extends Component {
   }
 
   handleClick = (e) => {
-    const sum = Number(this.state.subtotal) +  Number(e.target.id);
+    const sum =  Number(e.target.id);
     this.setState({ subtotal: sum },()=>console.log('subtotal', sum));
   }
 
@@ -30,25 +31,26 @@ class DonationWidget extends Component {
     const animal = e.target.value;
     this.setState({
       selectedAnimal: animal,
-      subtotal: 0
+      subtotal: null
     });
     console.log('change', e.target.value);
     console.log('handleChange subtotal',this.state.subtotal);
   }
 
-  handleSubmit = e => {
+  handleSubmit = (e, err) => {
     e.preventDefault();
-    console.log(e.target);
-    // const sum = Number(this.state.subtotal) + this.state.total;
-    // this.setState({
-    //   total: sum,
-    //   subtotal: 0
-    // },()=>console.log('total', this.state.total));
+    const{ subtotal, selectedAnimal } = this.state;
+    const sum = Number(subtotal);
+    this.setState({
+      total: sum,
+      subtotal: 0,
+      error: err
+    },()=> alert('Thank you for donating ' + sum + ' to the ' + selectedAnimal ));
   }
 
   render(){
     const giraffe = 'giraffe';
-    const{numberInput, selectedAnimal, subtotal} = this.state;
+    const{numberInput, selectedAnimal, subtotal, total} = this.state;
     // console.log('widget', handleSubmit);
     return (
       <div id="donation" className="row no-gutters">
@@ -56,13 +58,14 @@ class DonationWidget extends Component {
           <div className="container donation-left">
             <h2>MAKE A DONATION</h2>
             <form
-              method="get"
+              method="POST"
               action=""
               onSubmit={this.handleSubmit}>
               <DonationSelect
                 handleChange={this.handleChange}
                 selectedAnimal={selectedAnimal}
               />
+              <input type="hidden" value={total} required />
               <div className="row">
                 <p className="donate-sub-heading">I want to donate:</p>
               </div>
@@ -92,10 +95,10 @@ class DonationWidget extends Component {
                     max="9999999999"
                     onChange={e=> {
                       const num = Number(e.target.value) + Number(numberInput);
-                      this.setState({numberInput: num
+                      this.setState({subtotal: num
+                      },()=>{
+                        console.log('subtotal', subtotal);
                       });
-                      console.log('subtotal', subtotal);
-
                     }}
                   />
                 </div>
@@ -104,7 +107,11 @@ class DonationWidget extends Component {
                 <label className="form-check-label">
                   <input
                     type="checkbox" className="form-check-input"
-                    value="monthly"
+                    value="true"
+                    onChange={(e)=>{
+                      const truthy = e.target.value;
+                      console.log(truthy);
+                    }}
                   />
                   I want to do a monthly donation
                 </label>
