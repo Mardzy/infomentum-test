@@ -2,7 +2,9 @@
 @import "variables";
 @import "navbar";
 @import "donate";
+@import "what-we-do";
 @import "footer";
+@import "media-queries";
 
 body{
   margin: 0;
@@ -10,30 +12,79 @@ body{
   width: 100%;
   color: $darkGrey;
   font-family: $font;
-}
 
-main{
-  display: flex;
-  align-items: center;
-  border-top: 7px $yellow solid;
-  flex-direction: column;
-}
+  main{
+    display: flex;
+    align-items: center;
+    border-top: 7px $yellow solid;
+    flex-direction: column;
 
-button{
-  height: 28px;
-  padding: 6px 12px;
-  width: auto;
-  line-height: 16px;
-  font-size: 8px;
-  &:hover{
-    cursor: pointer;
+    button{
+      height: 28px;
+      padding: 6px 12px;
+      width: auto;
+      line-height: 14px;
+      font-size: 9px;
+      font-weight: bold;
+      color: $white;
+      font-weight: bold;
+      width: 95px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    button.green{
+      background-color: $green;
+      border-bottom: 3px solid darken($green, 10%);
+      transition: all .5s ease-in-out;
+      &:hover{
+        background-color: lighten($green, 4%);
+        border-bottom: 3px solid lighten(rgb(78, 136, 49), 8%);
+      }
+    }
+
+    button.history{
+      @extend button;
+      background-color: $darkGrey;
+      color: $white;
+      margin-right: 10px;
+      border-bottom: 3px solid darken($darkGrey, 10%);
+      text-transform: uppercase;
+      transition: all .5s ease-in-out;
+      &:hover{
+        background-color: lighten($darkGrey, 10%);
+        border-bottom: 3px solid lighten($darkGrey, 2%);
+
+      }
+    }
+
+    button.involved{
+      @extend button.history;
+      background-color: $yellow;
+      border-bottom: 3px solid darken($yellow, 10%);
+      &:hover{
+        background-color: lighten($yellow, 10%);
+        border-bottom: 3px solid lighten(rgb(235, 166, 57), 8%);
+
+      }
+    }
+
+    h1{
+      padding: 32px 0 20px;
+      text-transform: uppercase;
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    h5{
+      font-size: 16px;
+      font-weight: 100;
+      margin-bottom: 5px;
+    }
+
+    ul{
+      list-style: none;
+    }
   }
-}
-
-button.green{
-  background-color: $green;
-  color: $white;
-  font-size: 10px;
-  font-weight: 500;
-  border-bottom: 3px solid darken($green, 8%);
 }

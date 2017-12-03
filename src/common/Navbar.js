@@ -1,12 +1,14 @@
 import React from 'react';
 
 
-const Navbar =({handleClick})=>{
+const Navbar =()=>{
 
   return (
     <nav>
-      <img src="src/assets/logos/lts-logo-dark.svg" alt="Little Zebra Foundation Logo Dark" />
-      <ul onClick={handleClick}>
+      <a href="#">
+        <img src="src/assets/logos/lts-logo-dark.svg" alt="Little Zebra Foundation Logo Dark" />
+      </a>
+      <ul>
         <li className=""><a href="/" className="nav-links">What we do</a></li>
         <li className=""><a href="/about" className="nav-links">Get Involved</a></li>
         <li className=""><a href="/projects" className="nav-links">Shop</a></li>

@@ -1,0 +1,95 @@
+@media only screen and (max-width: $largeBreak) {
+  .hidden-large{
+    display: none;
+  }
+  nav div.search{
+    display: none;
+  }
+  #donate #donation{
+    width: 70%;
+  }
+  #what-we-do{
+    height: 600px;
+  }
+  footer .container .row li a img{
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media only screen and (max-width: $mediumBreak) {
+  nav {
+    width: 80%;
+    ul{
+      width: 50%;
+    }
+    button.green{
+      display: none;
+    }
+  }
+  .hidden-medium{
+    display: none;
+  }
+
+  #what-we-do.row{
+    height: 460px;
+  }
+
+}
+
+@media only screen and (max-width: $smallBreak) {
+  .hidden-small{
+    display: none;
+  }
+  nav {
+    width: 95%;
+    ul{
+      width: 70%;
+    }
+    img{
+      width: 100px;
+    }
+  }
+  h5{
+    width: 80%;
+    font-size: 16px;
+    text-align: center;
+  }
+  #donate #donation{
+    height: 590px;
+    .donation-left {
+      padding: 10px;
+      form .donation-buttons{
+      justify-content: space-between;
+      .pound-input {
+        width: 30%;
+      }
+    }
+  }
+}
+
+#what-we-do.row{
+  height: 550px;
+  width: 80%;
+}
+
+footer .container{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .mb-3.row.nav {display: none;}
+
+  li{
+    display: inline-block;
+  }
+  div ul{
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+}

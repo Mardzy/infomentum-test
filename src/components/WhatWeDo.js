@@ -1,35 +1,22 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 
-import { Row } from 'reactstrap';
-
-
-class About extends React.Component {
-  render(){
-    return (
-      <div id="about">
-        <header>
-          <h2>About Me</h2>
-        </header>
-
-        <Row>
-          <div className="about-image">
-            <img src="../../src/assets/images/icons/paul.jpg" alt="photo of Paul Mardling"/>
+const WhatWeDo = ()=> {
+  return (
+    <div id="what-we-do" className="row">
+      <h1>WHAT WE DO</h1>
+      <h5>Discover more about the Little Zebra foundation and how you can help us</h5>
+      <div className="row">
+        <div className="col-md-7">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet, magna sit amet suscipit laoreet, ante velit scelerisque massa, ac mattis ex magna et turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br/><br/>Aliquam efficitur tellus vitae erat laoreet sodales. Donec mollis, augue nec feugiat accumsan, ante dui aliquet ante, sit amet vestibulum ligula ex non mi. Nunc quis imperdiet leo, blandit maximus orci. Phasellus porttitor test eros magna, et viverra massa cursus ut. Cras nec est et urna ullamcorper volutpat et tristique augue. Nullam sit amet odio eget tortor rhoncus volutpat nec sed ipsum. Vivamus semper a ligula a sodales.<br/><br/>Morbi mi dui, luctus ac vestibulum in, dapibus id ante. Vivamus eu odio non mi finibus dapibus a a erat. Cras commodo pharetra sapien, non ultrices nisl egestas eu.</p>
+          <div className="hidden-large">
+            <button type="button" className="history">Our History</button>
+            <button type="button" className="involved">Get Involved</button>
           </div>
-          <div className="about-content">
-            <p>From an early age I enjoyed problem solving, especially when it was paired with building things.<br/>
-            This lead me to a career as a Manufacturing Engineer, where I worked with CNC machines to create products for automotive, transportation, oil and gas, pneumatic, medical, and aerospace industries.<br/>
-            When I started playing around with coding tutorials, I realised that coding used very similar programmatic problem solving techniques, which was what I enjoyed most about my engineering role.<br/>
-            The more code I wrote, and the more I built, the more time I wanted to spend learning to design and code. Through these projects I realised how satisfying it can be to have something look sharp, and function the way I expect it should.<br/>
-            </p>
-            <p>I grew up in Canada, and now live with my wife, and our two cats in London, UK.</p>
-          </div>
-        </Row>
-
-
+        </div>
+        <img className="col-md-5 hidden-medium" src="src/assets/leopard-image.png" alt="leopard"/>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
-export default About;
+export default WhatWeDo;
