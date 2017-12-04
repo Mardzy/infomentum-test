@@ -7,9 +7,6 @@ class DonationWidget extends Component {
 
     this.state = {
       subtotal: null,
-      giraffe: null,
-      rhino: null,
-      tiger: null,
       numberInput: null,
       total: 0,
       monthlyDonation: false,
@@ -33,8 +30,8 @@ class DonationWidget extends Component {
       selectedAnimal: animal,
       subtotal: null
     });
-    console.log('change', e.target.value);
-    console.log('handleChange subtotal',this.state.subtotal);
+    // console.log('change', e.target.value);
+    // console.log('handleChange subtotal',this.state.subtotal);
   }
 
   handleSubmit = (e, err) => {
@@ -96,9 +93,9 @@ class DonationWidget extends Component {
                     onChange={e=> {
                       const num = Number(e.target.value) + Number(numberInput);
                       this.setState({subtotal: num
-                      },()=>{
+                      }/*,()=>{
                         console.log('subtotal', subtotal);
-                      });
+                      }*/);
                     }}
                   />
                 </div>
