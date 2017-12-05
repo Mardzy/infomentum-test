@@ -37,7 +37,7 @@
 ### 9. Build out functions to handle donation widget
 ### 10. Start App
 Using the terminal, navigate to the root of the app.
-Type npm start, and the browser will open the app.
+Type npm start, and in the browser type http://localhost:8080/.
 
 
 # Notes
